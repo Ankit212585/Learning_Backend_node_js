@@ -11,4 +11,17 @@ code and provides excellent performance.Node.js is commonly used for
 creating RESTful APIs and microservices, which can be easily
 integrated into larger applications or systems.
 
+Q:- How to create a package.json file.
 
+Ans:- To create a package.json file, you can use the npm init command.
+This command will create package.json file
+
+1. create any js file and try to run the code like console.log
+   ("hello_world")
+
+2. How to import or export functions and files. Basically when you
+   export any function or a module then write module.exports = file
+   name;
+
+ii. On other hand when you import any file than write the code const
+variable name = require("./pathfile")**
