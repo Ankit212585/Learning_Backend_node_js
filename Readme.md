@@ -65,3 +65,37 @@ allows for URL resolution and parsing. Here's a brief overview of how
 the url module works:
 
 const url = require("URL") //URL is a inbuilt function in nodejs
+
+<!-- What is Express js and why we use Express js  -->
+
+Express.js is a minimal and flexible web application framework for
+Node.js. It provides a robust set of features for building web and
+mobile applications. Express.js simplifies the process of handling
+HTTP requests and responses, making it easier to create web servers
+and APIs. Here is a brief overview of Express.js:
+
+<!-- why we use Express js and what is the benifit of exprss js...? -->
+
+Basically Expess js handle all the http requests like get, put, post
+,delete, and edit, Expess js handle the MiddleWare.
+
+Minimal Setup: Express.js allows you to quickly set up a web server
+with minimal configuration. Easy Routing: It provides a simple and
+intuitive interface for defining routes for different HTTP methods and
+URL paths.
+
+Pre-built Middleware: There is a vast ecosystem of middleware
+available for common tasks like parsing request bodies, handling
+cookies, logging, and more.
+
+Large Community: Express.js has a large and active community, which
+means you can find plenty of tutorials, guides, and community support.
+
+Event-Driven Architecture: It leverages Node.js's event-driven,
+non-blocking I/O model, which is ideal for building scalable and
+real-time applications. Compatibility: It integrates seamlessly with
+other Node.js libraries and tools, providing a cohesive development
+environment.
+
+Expres js handle the All type of Api , Express js handle the Axios
+method...!
