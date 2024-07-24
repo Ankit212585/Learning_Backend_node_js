@@ -68,11 +68,11 @@ const url = require("URL") //URL is a inbuilt function in nodejs
 
 <!-- What is Express js and why we use Express js  -->
 
-Express.js is a minimal and flexible web application framework for
-Node.js. It provides a robust set of features for building web and
-mobile applications. Express.js simplifies the process of handling
-HTTP requests and responses, making it easier to create web servers
-and APIs. Here is a brief overview of Express.js:
+Express.js is a minimal and flexible web application and node Js
+framework for Node.js. It provides a robust set of features for
+building web and mobile applications. Express.js simplifies the
+process of handling HTTP requests and responses, making it easier to
+create web servers and APIs. Here is a brief overview of Express.js:
 
 <!-- why we use Express js and what is the benifit of exprss js...? -->
 
@@ -99,3 +99,61 @@ environment.
 
 Expres js handle the All type of Api , Express js handle the Axios
 method...!
+
+<!-- Lets we talk about the versions -->
+
+version Like Express version is 4.19.2
+
+1st part -> 4
+
+2nd part -> 19
+
+3rd part -> 2
+
+Basically we learn firstly 3rd part of version
+
+3rd part (Last part) - Minnor fixes (optional), in short we can say
+that this 3rd part of version have small fix , and when update this
+version , the small bug are fix , it is totally depend on you , you
+fix it or not, This version is opetional
+
+2nd part Recommended Bug fix (secure Fix) , in shot we can say that
+this 2nd part update will be recomanded for every user, its mandatory
+to fix it, go to the documentation and update your version
+
+1st part major and breaking upate , this update really change to
+execution method , suppose you already know to code write in pervious
+version but now your version is 5.0.0 something, and know you don't
+know when you write your code is it working or not...? , new version
+execution code is maybe different...!
+
+<!-- what is RestfulApi...? -->
+
+Basically Restful apis use curd operations like , get, put, post
+,patch and Delete, Suppose we have two sides like 1st side is server
+and 2nd side is client, then client sant a req to the server, and
+server get the req from the client, in this case server sand the
+response , which req sand the client, server sand something type of
+data like, text data, image data, video data, jSON data, and other
+data, when client get the data, then client decide how to use this
+data...!
+
+<!-- Go to the 1st project and see this how all operations works-->
+
+Rest API
+
+Get/users - HTML doucment Render
+
+Get/api/users - LIst all users JSON - Done
+
+Get/api/users/1 - Get the user with ID 1
+
+Get/api/users/2 - Get the user with ID 1
+
+<!-- Basically this is dynamically route , how to empliment it -->
+
+Dynamic Path Parameters
+
+Get /api/users/:id
+
+:id - v=Variable1 | Dynamic
