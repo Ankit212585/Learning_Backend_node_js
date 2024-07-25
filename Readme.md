@@ -203,4 +203,93 @@ response
 
 Hearder carry information for the Resquest and response body.
 
+<!-- HTTP status code -->
+
+we have many HTTP status code here is some information about the
+status codes
+
+Informational responses (100 – 199):- There is a status code 100 to
+199 who gives you an information is client request and server request.
+
+Successful responses (200 – 299): 200 means your server will be
+perfectly run in the browser
+
+Redirection messages (300 – 399):- The request has more than one
+possible response. The user agent or user should choose one of them.
+(There is no standardized way of choosing one of the responses, but
+HTML links to the possibilities are recommended so the user can pick.)
+
+Client error responses (400 – 499):- The server cannot or will not
+process the request due to something that is perceived to be a client
+error (e.g., malformed request syntax, invalid request message
+framing, or deceptive request routing).
+
+Server error responses (500 – 599):- The server has encountered a
+situation it does not know how to handle.This error response means
+that the server, while working as a gateway to get a response needed
+to handle the request, got an invalid response
+
+<!-- How to connect mongoDB -->
+
+Go to the google and search mongodb , click the first link and connect
+your google or github account, set your password, and open the mongodb
+database, download the mongodb compass and open it , go to the your
+online dataBase and on front screen you see the overView, and here you
+see the connect button click this button and open the dialog box then
+you see the compass option click the compass option and copy the
+connect id and past to the compass, and give the password in the link.
+
+<!-- npm i mongoose -->
+
+when you connect your mongoesCompass in your serever then install the
+mongoose
+
+Schema - Define the structure
+
+Schema - model
+
+using Model we do CRUD operation for example create, update, delete
+
+There is a dataBase who save your data in a JSON formate. Benifits
+
+1. No SQL document Based Database
+
+2. Strong Support for Aggregation Pipes
+
+3. WOrks on BSON formate
+
+4. Best for Node Applications.
+
+<!-- Lets Talk about MVC -->
+
+MVxC:- model view controller
+
+In Node.js, the MVC (Model-View-Controller) pattern is a popular
+architectural pattern used to structure and organize code in web
+applications. It divides the application into three interconnected
+components:
+
+<!-- Model: -->
+
+Represents the data and the business logic of the application. Manages
+the data, logic, and rules of the application. Interacts with the
+database and handles data-related tasks. Example: Mongoose models in a
+MongoDB setup.
+
+<!-- View: -->
+
+Represents the UI (User Interface) of the application. Displays the
+data to the user and sends user commands to the Controller. Often
+involves template engines like EJS, Pug, or front-end frameworks like
+React or Angular. Example: HTML files or template files that render
+data from the Model.
+
+<!-- Controller: -->
+
+Acts as an intermediary between the Model and the View. Processes user
+input, interacts with the Model to retrieve or update data, and
+renders the appropriate View. Handles routing and application logic.
+Example: Express.js route handlers that manage HTTP requests and
+responses.
+
 
