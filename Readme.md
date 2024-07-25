@@ -157,3 +157,50 @@ Dynamic Path Parameters
 Get /api/users/:id
 
 :id - v=Variable1 | Dynamic
+
+<!-- Go to the 1st Project and see how to execute all the functions -->
+
+<!-- What is middlewares...? -->
+
+There are 5 types of middlewares
+
+middleware function sare functions that have access to the request
+object (req) the reponse.object (res), and the next middleware
+function in the applicatiions request response cycle. The next
+middleware functions is commonly denoted by a variable name next
+
+Execute any code.
+
+make changes to the request objects.
+
+End the request response cycle.
+
+Call the next middleware function in the stack.
+
+if the current middleware functions does not end the request response
+cyle it must all the next middleware function, Otherwise the request
+will be left hanging.
+
+1. Application handling MiddleWares:- Bound to an instance of the app
+   object using app.use() or app.METHOD().
+
+2. Route level middleWare:- Bound to an instance of express.Router().
+
+3. Error handling middlewares:- Defined with four arguments: (err,
+   req, res, next).
+
+4. Build in middlewares:- Provided by Express.js like express.static,
+   express.json, and express.urlencoded.
+
+5. Third party middlewares:- Developed by the community, like
+   body-parser, morgan, cors, etc.
+
+<!-- What is Http Hearder in API -->
+
+HTTP headers are an important part of the API request and response as
+they represent the meta-data associated with the API request and
+response
+
+Hearder carry information for the Resquest and response body.
+
+
