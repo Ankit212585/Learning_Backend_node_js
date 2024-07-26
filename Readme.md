@@ -292,4 +292,20 @@ renders the appropriate View. Handles routing and application logic.
 Example: Express.js route handlers that manage HTTP requests and
 responses.
 
+<!-- what is bodyParsers -->
 
+In Node.js, body-parser is a middleware module that helps parse the
+body of incoming request objects, making it easier to handle the data
+sent in HTTP requests. It is commonly used to parse JSON, URL-encoded,
+and other data formats submitted through POST requests.
+
+Key Features:-
+
+1. JSON Parsing: Parses incoming request bodies with JSON payloads.
+
+2. URL-encoded Parsing: Parses incoming request bodies with
+   URL-encoded payloads (useful for form submissions).
+
+3. Raw Parsing: Parses incoming request bodies into Buffer objects.
+
+4. Text Parsing: Parses incoming request bodies as strings.
