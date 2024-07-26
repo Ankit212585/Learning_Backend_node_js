@@ -309,3 +309,24 @@ Key Features:-
 3. Raw Parsing: Parses incoming request bodies into Buffer objects.
 
 4. Text Parsing: Parses incoming request bodies as strings.
+
+<!-- 2nd Project start -->
+
+URL Shortener
+
+Design a URL shortener service that takes in a valid RUL and returns a
+shortened URL redirecting the user to the perviously provided URL.
+
+ALso keep track of total visits/clicks on the URL
+
+Routes
+
+POST/URL - Generates a new short URL and return the shortened URL in
+the formate example.com/ randomg-id
+
+Get/:id - Redirects the user to the roginigal URL
+
+Get/URL/analytics/:id - Returns the clicks for the provided shor id.
+
+
+ 
