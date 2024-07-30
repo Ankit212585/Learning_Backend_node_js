@@ -5,6 +5,9 @@ const {
 
 const router = express.Router();
 
-router.post("/", handleGenerateNewShortURL);
+router.get("/get", (req, res) => {
+  res.send("hello world");
+});
+router.post("/post", handleGenerateNewShortURL);
 
 module.exports = router;

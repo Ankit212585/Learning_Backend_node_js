@@ -328,5 +328,16 @@ Get/:id - Redirects the user to the roginigal URL
 
 Get/URL/analytics/:id - Returns the clicks for the provided shor id.
 
+<!-- What is Authentication -->
 
- 
+Authentication in Node.js refers to the process of verifying the
+identity of a user or system. It is a crucial part of web application
+security to ensure that only authorized users can access certain
+resources or perform specific actions. Here are the key concepts and
+methods for implementing authentication in a Node.js application:
+
+Authentications has two patterns:-
+
+1. Statefull:- which maintains state or data or server side
+
+2. Stateless:- Which has no state

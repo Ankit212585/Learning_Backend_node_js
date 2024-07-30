@@ -1,6 +1,7 @@
 // HTTP Status codes
 // connect mongoDb
 const express = require("express");
+const bcrypt = require("bcryptjs");
 const myusers = require("./MOCK_DATA.json");
 
 const mongoose = require("mongoose");
@@ -37,6 +38,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       require: true,
     },
+    password: {
+      type: String,
+      require: true,
+    },
     Gender: {
       type: String,
       require: true,
@@ -49,7 +54,7 @@ const userSchema = new mongoose.Schema(
 const User = mongoose.model("User", userSchema);
 
 app
-  .route("/myusers/:id")
+  .route("/myusers")
   .get(async (req, res) => {
     const finduser = await User.findById(req.params.id);
     console.log(finduser); // find some data from id
@@ -64,18 +69,22 @@ app
       !body.FirstName ||
       !body.LastName ||
       !body.Email ||
-      !body.JobTitle
+      !body.JobTitle ||
+      !body.password
     ) {
       return res
         .status(400)
         .json({ message: "All field are req..." });
     }
+
     const result = await User.create({
       FirstName: body.FirstName,
       LastName: body.LastName,
       Email: body.Email,
       JobTitle: body.JobTitle,
+      password: body.password,
     });
+
     console.log(result);
 
     return res
