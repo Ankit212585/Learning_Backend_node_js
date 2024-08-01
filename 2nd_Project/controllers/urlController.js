@@ -5,12 +5,12 @@ const { shortid } = require("shortid");
 
 const handleGenerateNewShortURL = async (req, res) => {
   try {
-    const { username, visitedHistory } = req.body;
+    const { shortID, username, visitedHistory } = req.body;
 
     const userExist = await Url.findOne({ username });
 
     if (!userExist)
-      return res.status(400).json({ error: "username is required" });
+      res.status(400).json({ error: "username is required" });
 
     const shortId = shortid(8); //8 is indicate the number of length
     console.log(shortId);

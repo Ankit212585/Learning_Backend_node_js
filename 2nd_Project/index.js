@@ -6,11 +6,9 @@ const urlRoute = require("./routes/urlRouter");
 const app = express();
 
 const Port = 9001;
+app.use(express.json());
 
 app.use("/url", urlRoute);
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 
 dbConnect().then(() => {
   app.listen(Port, () => {
