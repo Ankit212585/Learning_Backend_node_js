@@ -1,6 +1,9 @@
+const { generate } = require("shortid");
 const User = require("../Models/user");
+// const JWT = require("jsonwebtoken");
 
-const GenerateUser = async (req, res) => {
+// Register user -------------------------------------------------------
+const register = async (req, res) => {
   try {
     const { firstName, lastName, Email, jobTitle } = req.body;
 
@@ -13,7 +16,6 @@ const GenerateUser = async (req, res) => {
     if (userExist) {
       res.status(200).json({ message: userExist });
     }
-
     // create any user
     const myUser = await User.create({
       firstName,
@@ -21,13 +23,51 @@ const GenerateUser = async (req, res) => {
       Email,
       jobTitle,
     });
-    console.log(myUser);
-    res
-      .status(201)
-      .json({ message: `user successfully created ${myUser}` });
+    // console.log(myUser);
+    res.status(201).json({
+      message: `user successfully created ${myUser}`,
+      token: await myUser.generateToken(),
+      userId: myUser._id.toString(),
+
+    });
   } catch (err) {
     console.log("User cannot be created", err);
   }
 };
 
-module.exports = GenerateUser;
+// Login user -----------------------------------------------------------
+
+const Login = async (req, res) => {
+  try {
+    const { Email } = req.body;
+
+    // Find user Email
+    const Existuser = await User.findOne({ Email });
+
+    if (!Existuser) {
+      res.status(400).json("user cannot find");
+    } else {
+      res.status(200).json("user successfully login");
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(400).json("User cannot be login", err);
+  }
+};
+
+// Get user info
+
+const GetUser = async (req, res) => {
+  try {
+    const users = await User.find();
+    if (users && users.length > 0) {
+      res.status(200).json({ message: users });
+    } else {
+      res.status(404).json("user cannot be find in dataBase");
+    }
+  } catch (err) {
+    console.log("User cannot be created", err);
+  }
+};
+
+module.exports = { register, GetUser, Login };
