@@ -12,12 +12,12 @@ app.get("/api/user", (req, res) => {
 });
 
 // Get all the users Name data
-// app.get("/api/user/name", (req, res) => {
-//   const html = `<ul>
-//      ${users.map((data) => `<li>${data.first_name}</li>`).join("")}
-//    </ul>`;
-//   res.send(html);
-// });
+app.get("/api/user/name", (req, res) => {
+  const html = `<ul>
+     ${users.map((data) => `<li>${data.first_name}</li>`).join("")}
+   </ul>`;
+  res.send(html);
+});
 
 // Get all the user data with id
 

@@ -10,6 +10,9 @@ const GenerateUser = async (req, res) => {
     if (!userExist) {
       res.status(500).json("user cannot be find in dataBase");
     }
+    if (userExist) {
+      res.status(200).json({ message: userExist });
+    }
 
     // create any user
     const myUser = await User.create({
