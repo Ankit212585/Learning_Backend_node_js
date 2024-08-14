@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const JWT = require("jsonwebtoken");
+const jwt = require("jsonwebtoken");
 
 // schema Structure
 
@@ -25,7 +25,7 @@ const userSchema = mongoose.Schema({
 
 userSchema.methods.generateToken = async function () {
   try {
-    return JWT.sign(
+    return jwt.sign(
       {
         userId: this._id.toString(),
         Email: this.Email,

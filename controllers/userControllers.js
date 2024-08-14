@@ -23,12 +23,15 @@ const register = async (req, res) => {
       Email,
       jobTitle,
     });
-    // console.log(myUser);
+    console.log({
+      msg: myUser,
+      token: await myUser.generateToken(), //this token is working on it
+      userId: myUser._id.toString(),
+    });
     res.status(201).json({
       message: `user successfully created ${myUser}`,
       token: await myUser.generateToken(),
       userId: myUser._id.toString(),
-
     });
   } catch (err) {
     console.log("User cannot be created", err);
@@ -47,7 +50,11 @@ const Login = async (req, res) => {
     if (!Existuser) {
       res.status(400).json("user cannot find");
     } else {
-      res.status(200).json("user successfully login");
+      res.status(200).json({
+        msg: "user successfully login",
+        // token: await User.generateToken,
+        // userId: Existuser._id.toString(),
+      });
     }
   } catch (err) {
     console.log(err);
